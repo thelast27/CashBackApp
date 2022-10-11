@@ -9,11 +9,18 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var searchBarView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        searchBarView.layer.cornerRadius = 28
+        searchBarView.clipsToBounds = true
+        
     }
 
+    @IBAction func searchButtonPressed(_ sender: Any) {
+        
+    }
+    
 
 }
 
