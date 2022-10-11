@@ -14,6 +14,10 @@
 		4D192CC128F5515B0004BCB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D192CC028F5515B0004BCB6 /* Assets.xcassets */; };
 		4D192CC428F5515B0004BCB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D192CC228F5515B0004BCB6 /* LaunchScreen.storyboard */; };
 		4D192CCC28F557660004BCB6 /* OpenSearchBarPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D192CCB28F557660004BCB6 /* OpenSearchBarPageVC.swift */; };
+		4D192CCF28F569940004BCB6 /* PreviousSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D192CCD28F569940004BCB6 /* PreviousSearchTableViewCell.swift */; };
+		4D192CD028F569940004BCB6 /* PreviousSearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D192CCE28F569940004BCB6 /* PreviousSearchTableViewCell.xib */; };
+		4D192CD328F59C260004BCB6 /* MainScreenMarketsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D192CD128F59C260004BCB6 /* MainScreenMarketsTableViewCell.swift */; };
+		4D192CD428F59C260004BCB6 /* MainScreenMarketsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D192CD228F59C260004BCB6 /* MainScreenMarketsTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		4D192CC328F5515B0004BCB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D192CC528F5515B0004BCB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D192CCB28F557660004BCB6 /* OpenSearchBarPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSearchBarPageVC.swift; sourceTree = "<group>"; };
+		4D192CCD28F569940004BCB6 /* PreviousSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousSearchTableViewCell.swift; sourceTree = "<group>"; };
+		4D192CCE28F569940004BCB6 /* PreviousSearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PreviousSearchTableViewCell.xib; sourceTree = "<group>"; };
+		4D192CD128F59C260004BCB6 /* MainScreenMarketsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenMarketsTableViewCell.swift; sourceTree = "<group>"; };
+		4D192CD228F59C260004BCB6 /* MainScreenMarketsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainScreenMarketsTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,8 +69,12 @@
 				4D192CB728F551590004BCB6 /* AppDelegate.swift */,
 				4D192CB928F551590004BCB6 /* SceneDelegate.swift */,
 				4D192CBB28F551590004BCB6 /* StartViewController.swift */,
+				4D192CD128F59C260004BCB6 /* MainScreenMarketsTableViewCell.swift */,
+				4D192CD228F59C260004BCB6 /* MainScreenMarketsTableViewCell.xib */,
 				4D192CBD28F551590004BCB6 /* Main.storyboard */,
 				4D192CCB28F557660004BCB6 /* OpenSearchBarPageVC.swift */,
+				4D192CCD28F569940004BCB6 /* PreviousSearchTableViewCell.swift */,
+				4D192CCE28F569940004BCB6 /* PreviousSearchTableViewCell.xib */,
 				4D192CC028F5515B0004BCB6 /* Assets.xcassets */,
 				4D192CC228F5515B0004BCB6 /* LaunchScreen.storyboard */,
 				4D192CC528F5515B0004BCB6 /* Info.plist */,
@@ -130,7 +142,9 @@
 			files = (
 				4D192CC428F5515B0004BCB6 /* LaunchScreen.storyboard in Resources */,
 				4D192CC128F5515B0004BCB6 /* Assets.xcassets in Resources */,
+				4D192CD028F569940004BCB6 /* PreviousSearchTableViewCell.xib in Resources */,
 				4D192CBF28F551590004BCB6 /* Main.storyboard in Resources */,
+				4D192CD428F59C260004BCB6 /* MainScreenMarketsTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +157,8 @@
 			files = (
 				4D192CBC28F551590004BCB6 /* StartViewController.swift in Sources */,
 				4D192CB828F551590004BCB6 /* AppDelegate.swift in Sources */,
+				4D192CD328F59C260004BCB6 /* MainScreenMarketsTableViewCell.swift in Sources */,
+				4D192CCF28F569940004BCB6 /* PreviousSearchTableViewCell.swift in Sources */,
 				4D192CBA28F551590004BCB6 /* SceneDelegate.swift in Sources */,
 				4D192CCC28F557660004BCB6 /* OpenSearchBarPageVC.swift in Sources */,
 			);

@@ -8,46 +8,61 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Start View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CashBackApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StartVC" id="BYZ-38-t0r" customClass="StartViewController" customModule="CashBackApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ggW-H4-JSe">
-                                <rect key="frame" x="20" y="148" width="374" height="112"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="yrd-Bj-hbt">
+                                <rect key="frame" x="12" y="300" width="390" height="562"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RXm-Tn-bU4">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="112"/>
-                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="magnifyingglass" catalog="system" imagePlacement="leading" title="Поиск магазинов, товаров"/>
-                                        <connections>
-                                            <action selector="searchButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="td7-Py-HLw"/>
-                                        </connections>
-                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ggW-H4-JSe">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="70"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RXm-Tn-bU4">
+                                                <rect key="frame" x="0.0" y="0.0" width="390" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="350" id="ndb-cw-3d4"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="magnifyingglass" catalog="system" imagePlacement="leading" title="Поиск магазинов, товаров"/>
+                                                <connections>
+                                                    <action selector="searchButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="td7-Py-HLw"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="RXm-Tn-bU4" firstAttribute="leading" secondItem="ggW-H4-JSe" secondAttribute="leading" id="2f8-n9-ysx"/>
+                                            <constraint firstAttribute="height" constant="70" id="Q0E-sF-AHJ"/>
+                                            <constraint firstAttribute="bottom" secondItem="RXm-Tn-bU4" secondAttribute="bottom" id="cSm-hw-GAc"/>
+                                            <constraint firstAttribute="trailing" secondItem="RXm-Tn-bU4" secondAttribute="trailing" id="e8X-Pi-WHf"/>
+                                            <constraint firstItem="RXm-Tn-bU4" firstAttribute="top" secondItem="ggW-H4-JSe" secondAttribute="top" id="uUp-EH-W5b"/>
+                                        </constraints>
+                                    </view>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="MfZ-uc-BOP">
+                                        <rect key="frame" x="0.0" y="110" width="390" height="452"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstItem="RXm-Tn-bU4" firstAttribute="leading" secondItem="ggW-H4-JSe" secondAttribute="leading" id="2f8-n9-ysx"/>
-                                    <constraint firstAttribute="bottom" secondItem="RXm-Tn-bU4" secondAttribute="bottom" id="cSm-hw-GAc"/>
-                                    <constraint firstAttribute="trailing" secondItem="RXm-Tn-bU4" secondAttribute="trailing" id="e8X-Pi-WHf"/>
-                                    <constraint firstItem="RXm-Tn-bU4" firstAttribute="top" secondItem="ggW-H4-JSe" secondAttribute="top" id="uUp-EH-W5b"/>
-                                </constraints>
-                            </view>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ggW-H4-JSe" secondAttribute="bottom" constant="602" id="CrN-cC-yRQ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ggW-H4-JSe" secondAttribute="trailing" constant="20" id="MMX-9y-jmf"/>
-                            <constraint firstItem="ggW-H4-JSe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="xG0-aK-CE7"/>
-                            <constraint firstItem="ggW-H4-JSe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="104" id="yaT-QE-Q3P"/>
+                            <constraint firstItem="yrd-Bj-hbt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4IW-mI-OOQ"/>
+                            <constraint firstItem="yrd-Bj-hbt" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="300" id="6PK-Ip-WoL"/>
+                            <constraint firstAttribute="trailing" secondItem="yrd-Bj-hbt" secondAttribute="trailing" constant="12" id="Zay-UB-eGJ"/>
+                            <constraint firstItem="yrd-Bj-hbt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="12" id="krG-cE-vf5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yrd-Bj-hbt" secondAttribute="bottom" id="wnx-pg-d7A"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="marketsTableView" destination="MfZ-uc-BOP" id="1A5-Kk-z6e"/>
                         <outlet property="searchBarView" destination="ggW-H4-JSe" id="3xk-Gk-nhl"/>
                     </connections>
                 </viewController>
@@ -58,7 +73,7 @@
         <!--Open Search Bar PageVC-->
         <scene sceneID="UFu-3F-7fu">
             <objects>
-                <viewController storyboardIdentifier="openSearchBarPage" id="Kcb-1N-RVX" customClass="OpenSearchBarPageVC" customModule="CashBackApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OpenSearchBarPage" id="Kcb-1N-RVX" customClass="OpenSearchBarPageVC" customModule="CashBackApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JVL-Ey-qpQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
