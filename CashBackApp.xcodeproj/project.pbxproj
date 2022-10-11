@@ -66,20 +66,68 @@
 		4D192CB628F551590004BCB6 /* CashBackApp */ = {
 			isa = PBXGroup;
 			children = (
-				4D192CB728F551590004BCB6 /* AppDelegate.swift */,
-				4D192CB928F551590004BCB6 /* SceneDelegate.swift */,
-				4D192CBB28F551590004BCB6 /* StartViewController.swift */,
-				4D192CD128F59C260004BCB6 /* MainScreenMarketsTableViewCell.swift */,
-				4D192CD228F59C260004BCB6 /* MainScreenMarketsTableViewCell.xib */,
-				4D192CBD28F551590004BCB6 /* Main.storyboard */,
-				4D192CCB28F557660004BCB6 /* OpenSearchBarPageVC.swift */,
-				4D192CCD28F569940004BCB6 /* PreviousSearchTableViewCell.swift */,
-				4D192CCE28F569940004BCB6 /* PreviousSearchTableViewCell.xib */,
-				4D192CC028F5515B0004BCB6 /* Assets.xcassets */,
-				4D192CC228F5515B0004BCB6 /* LaunchScreen.storyboard */,
-				4D192CC528F5515B0004BCB6 /* Info.plist */,
+				4D192CD928F5A2AC0004BCB6 /* Helpers */,
+				4D192CD828F5A2990004BCB6 /* ViewControllers */,
+				4D192CD528F5A2500004BCB6 /* TableViewCells */,
+				4D192CDA28F5A2BA0004BCB6 /* Storyboards */,
 			);
 			path = CashBackApp;
+			sourceTree = "<group>";
+		};
+		4D192CD528F5A2500004BCB6 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				4D192CD628F5A26F0004BCB6 /* MainScreenCells */,
+				4D192CD728F5A2810004BCB6 /* SearchHistoryCells */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		4D192CD628F5A26F0004BCB6 /* MainScreenCells */ = {
+			isa = PBXGroup;
+			children = (
+				4D192CD128F59C260004BCB6 /* MainScreenMarketsTableViewCell.swift */,
+				4D192CD228F59C260004BCB6 /* MainScreenMarketsTableViewCell.xib */,
+			);
+			path = MainScreenCells;
+			sourceTree = "<group>";
+		};
+		4D192CD728F5A2810004BCB6 /* SearchHistoryCells */ = {
+			isa = PBXGroup;
+			children = (
+				4D192CCD28F569940004BCB6 /* PreviousSearchTableViewCell.swift */,
+				4D192CCE28F569940004BCB6 /* PreviousSearchTableViewCell.xib */,
+			);
+			path = SearchHistoryCells;
+			sourceTree = "<group>";
+		};
+		4D192CD828F5A2990004BCB6 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4D192CBB28F551590004BCB6 /* StartViewController.swift */,
+				4D192CCB28F557660004BCB6 /* OpenSearchBarPageVC.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		4D192CD928F5A2AC0004BCB6 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				4D192CB728F551590004BCB6 /* AppDelegate.swift */,
+				4D192CB928F551590004BCB6 /* SceneDelegate.swift */,
+				4D192CC028F5515B0004BCB6 /* Assets.xcassets */,
+				4D192CC528F5515B0004BCB6 /* Info.plist */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		4D192CDA28F5A2BA0004BCB6 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				4D192CBD28F551590004BCB6 /* Main.storyboard */,
+				4D192CC228F5515B0004BCB6 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
