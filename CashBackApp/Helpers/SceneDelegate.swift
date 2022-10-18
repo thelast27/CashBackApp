@@ -19,10 +19,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
         window?.makeKeyAndVisible()
-        guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "StartVC") as? StartViewController else { return }
-        let navVC = UINavigationController(rootViewController: vc)
-        navVC.navigationBar.tintColor = .black
-        window?.rootViewController = navVC
+//        guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "StartVC") as? StartViewController else { return }
+//        let navVC = UINavigationController(rootViewController: vc)
+//        navVC.navigationBar.tintColor = .black
+        window?.rootViewController = TabBarViewController()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

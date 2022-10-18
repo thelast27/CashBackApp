@@ -3,4 +3,114 @@
    uuid = "765EDF04-CC00-41F8-9D5E-2506A37963A3"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "73D96D02-1BB5-44EA-878F-201E2F9E06AE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CashBackApp/ViewControllers/SearchResultViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "SearchResultViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "73D96D02-1BB5-44EA-878F-201E2F9E06AE - dda64c2d6413c98c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CashBackApp.SearchResultViewController.searchResultModel.getter : Swift.Optional&lt;Swift.Array&lt;CashBackApp.Product&gt;&gt;"
+                  moduleName = "CashBackApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eldargarbuzov/Desktop/HomeProjects/CashBackApp/CashBackApp/ViewControllers/SearchResultViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "90">
+               </Location>
+               <Location
+                  uuid = "73D96D02-1BB5-44EA-878F-201E2F9E06AE - bc6d4e360d31fdf8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CashBackApp.SearchResultViewController.searchResultModel.setter : Swift.Optional&lt;Swift.Array&lt;CashBackApp.Product&gt;&gt;"
+                  moduleName = "CashBackApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eldargarbuzov/Desktop/HomeProjects/CashBackApp/CashBackApp/ViewControllers/SearchResultViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "116">
+               </Location>
+               <Location
+                  uuid = "73D96D02-1BB5-44EA-878F-201E2F9E06AE - b2cd1e32cf4c8f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CashBackApp.SearchResultViewController.searchResultModel.modify : Swift.Optional&lt;Swift.Array&lt;CashBackApp.Product&gt;&gt;"
+                  moduleName = "CashBackApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eldargarbuzov/Desktop/HomeProjects/CashBackApp/CashBackApp/ViewControllers/SearchResultViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "73D96D02-1BB5-44EA-878F-201E2F9E06AE - ff2e07c4c55506c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CashBackApp.SearchResultViewController.searchResultModel.modify : Swift.Optional&lt;Swift.Array&lt;CashBackApp.Product&gt;&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "CashBackApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eldargarbuzov/Desktop/HomeProjects/CashBackApp/CashBackApp/ViewControllers/SearchResultViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "15">
+               </Location>
+               <Location
+                  uuid = "73D96D02-1BB5-44EA-878F-201E2F9E06AE - d81d9cd33b703521"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CashBackApp.SearchResultViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; CashBackApp.SearchResultViewController"
+                  moduleName = "CashBackApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eldargarbuzov/Desktop/HomeProjects/CashBackApp/CashBackApp/ViewControllers/SearchResultViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "205">
+               </Location>
+               <Location
+                  uuid = "73D96D02-1BB5-44EA-878F-201E2F9E06AE - 5151406a7ffcc31d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CashBackApp.SearchResultViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;CashBackApp.SearchResultViewController&gt;"
+                  moduleName = "CashBackApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/eldargarbuzov/Desktop/HomeProjects/CashBackApp/CashBackApp/ViewControllers/SearchResultViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "162">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
