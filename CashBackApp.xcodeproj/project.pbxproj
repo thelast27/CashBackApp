@@ -99,10 +99,8 @@
 				4D192CD828F5A2990004BCB6 /* ViewControllers */,
 				4D192CD528F5A2500004BCB6 /* TableViewCells */,
 				4D192CDA28F5A2BA0004BCB6 /* Storyboards */,
-				4D34C7DE28F5A884000FB24E /* APIManager.swift */,
-				4D34C7E028F5AAB1000FB24E /* SearchResultModel.swift */,
-				4DF9B4E428F8383E007052CD /* ItemPhotoCollectionViewCell.swift */,
-				4DF9B4E528F8383E007052CD /* ItemPhotoCollectionViewCell.xib */,
+				4DEE839A28FEAFE7005EDE61 /* Manager */,
+				4DEE839B28FEAFEF005EDE61 /* Model */,
 			);
 			path = CashBackApp;
 			sourceTree = "<group>";
@@ -113,10 +111,7 @@
 				4D192CD628F5A26F0004BCB6 /* MainScreenCells */,
 				4D192CD728F5A2810004BCB6 /* SearchHistoryCells */,
 				4DF98F3D28F8037A0047D425 /* SearchResultCells */,
-				4D9CB4B528FD926D00C3B2B0 /* ConditionsTableViewCell.swift */,
-				4D9CB4B628FD926D00C3B2B0 /* ConditionsTableViewCell.xib */,
-				4DEE839528FE835F005EDE61 /* ItemInfoTableViewCell.swift */,
-				4DEE839628FE8360005EDE61 /* ItemInfoTableViewCell.xib */,
+				4DEE839928FEAF89005EDE61 /* ItemInfoCells */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -169,6 +164,35 @@
 				4DF98F4028F803BB0047D425 /* ItemInfoStoryboard.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		4DEE839928FEAF89005EDE61 /* ItemInfoCells */ = {
+			isa = PBXGroup;
+			children = (
+				4DF9B4E528F8383E007052CD /* ItemPhotoCollectionViewCell.xib */,
+				4DF9B4E428F8383E007052CD /* ItemPhotoCollectionViewCell.swift */,
+				4D9CB4B528FD926D00C3B2B0 /* ConditionsTableViewCell.swift */,
+				4D9CB4B628FD926D00C3B2B0 /* ConditionsTableViewCell.xib */,
+				4DEE839528FE835F005EDE61 /* ItemInfoTableViewCell.swift */,
+				4DEE839628FE8360005EDE61 /* ItemInfoTableViewCell.xib */,
+			);
+			path = ItemInfoCells;
+			sourceTree = "<group>";
+		};
+		4DEE839A28FEAFE7005EDE61 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				4D34C7DE28F5A884000FB24E /* APIManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		4DEE839B28FEAFEF005EDE61 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4D34C7E028F5AAB1000FB24E /* SearchResultModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		4DF98F3D28F8037A0047D425 /* SearchResultCells */ = {
