@@ -27,6 +27,8 @@
 		4D9CB4B728FD926D00C3B2B0 /* ConditionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9CB4B528FD926D00C3B2B0 /* ConditionsTableViewCell.swift */; };
 		4D9CB4B828FD926D00C3B2B0 /* ConditionsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D9CB4B628FD926D00C3B2B0 /* ConditionsTableViewCell.xib */; };
 		4D9E756228FEF27A00735837 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9E756128FEF27A00735837 /* TabBarViewController.swift */; };
+		4D9E756428FEF4A800735837 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9E756328FEF4A800735837 /* LoginViewController.swift */; };
+		4D9E756628FEF4B400735837 /* LoginStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D9E756528FEF4B400735837 /* LoginStoryboard.storyboard */; };
 		4DEE839728FE8360005EDE61 /* ItemInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEE839528FE835F005EDE61 /* ItemInfoTableViewCell.swift */; };
 		4DEE839828FE8360005EDE61 /* ItemInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DEE839628FE8360005EDE61 /* ItemInfoTableViewCell.xib */; };
 		4DF98F3F28F803AD0047D425 /* ItemInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF98F3E28F803AD0047D425 /* ItemInfoViewController.swift */; };
@@ -58,6 +60,8 @@
 		4D9CB4B528FD926D00C3B2B0 /* ConditionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionsTableViewCell.swift; sourceTree = "<group>"; };
 		4D9CB4B628FD926D00C3B2B0 /* ConditionsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConditionsTableViewCell.xib; sourceTree = "<group>"; };
 		4D9E756128FEF27A00735837 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		4D9E756328FEF4A800735837 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		4D9E756528FEF4B400735837 /* LoginStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginStoryboard.storyboard; sourceTree = "<group>"; };
 		4DEE839528FE835F005EDE61 /* ItemInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemInfoTableViewCell.swift; sourceTree = "<group>"; };
 		4DEE839628FE8360005EDE61 /* ItemInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemInfoTableViewCell.xib; sourceTree = "<group>"; };
 		4DF98F3E28F803AD0047D425 /* ItemInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemInfoViewController.swift; sourceTree = "<group>"; };
@@ -145,6 +149,7 @@
 				4D34C7E428F5B060000FB24E /* SearchResultViewController.swift */,
 				4DF98F3E28F803AD0047D425 /* ItemInfoViewController.swift */,
 				4D9E756128FEF27A00735837 /* TabBarViewController.swift */,
+				4D9E756328FEF4A800735837 /* LoginViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -166,6 +171,7 @@
 				4D192CC228F5515B0004BCB6 /* LaunchScreen.storyboard */,
 				4D34C7E228F5AFE0000FB24E /* SearchResultsStoryboard.storyboard */,
 				4DF98F4028F803BB0047D425 /* ItemInfoStoryboard.storyboard */,
+				4D9E756528FEF4B400735837 /* LoginStoryboard.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -284,6 +290,7 @@
 				4DEE839828FE8360005EDE61 /* ItemInfoTableViewCell.xib in Resources */,
 				4DF98F4128F803BB0047D425 /* ItemInfoStoryboard.storyboard in Resources */,
 				4D192CC428F5515B0004BCB6 /* LaunchScreen.storyboard in Resources */,
+				4D9E756628FEF4B400735837 /* LoginStoryboard.storyboard in Resources */,
 				4D192CC128F5515B0004BCB6 /* Assets.xcassets in Resources */,
 				4D9CB4B828FD926D00C3B2B0 /* ConditionsTableViewCell.xib in Resources */,
 				4D192CD028F569940004BCB6 /* PreviousSearchTableViewCell.xib in Resources */,
@@ -314,6 +321,7 @@
 				4D34C7E828F5B5F9000FB24E /* SearchResultTableViewCell.swift in Sources */,
 				4D192CBA28F551590004BCB6 /* SceneDelegate.swift in Sources */,
 				4DF98F3F28F803AD0047D425 /* ItemInfoViewController.swift in Sources */,
+				4D9E756428FEF4A800735837 /* LoginViewController.swift in Sources */,
 				4D192CCC28F557660004BCB6 /* OpenSearchBarPageVC.swift in Sources */,
 				4D9E756228FEF27A00735837 /* TabBarViewController.swift in Sources */,
 				4D34C7DF28F5A884000FB24E /* APIManager.swift in Sources */,
