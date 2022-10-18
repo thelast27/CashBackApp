@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="ItemInfoTableViewCell" customModule="CashBackApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="270"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="270"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="enl-Yy-zEs">
+                        <rect key="frame" x="16" y="11" width="288" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="288" id="qow-t5-CBL"/>
+                            <constraint firstAttribute="height" constant="21" id="ssT-6e-Slk"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vCj-bB-tzt">
+                        <rect key="frame" x="6" y="49" width="165" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="165" id="Y9p-iu-7iM"/>
+                            <constraint firstAttribute="height" constant="32" id="cdp-Jt-qBA"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cost" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aCK-bd-cXi">
+                        <rect key="frame" x="16" y="99" width="288" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="288" id="884-Ua-QDo"/>
+                            <constraint firstAttribute="height" constant="21" id="YAC-ZW-rhb"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Кешбек" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NPF-qv-IBl">
+                        <rect key="frame" x="16" y="128" width="78" height="21"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y0a-F1-dUQ">
+                        <rect key="frame" x="16" y="156" width="78" height="33"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" %%%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bpl-As-mOT">
+                                <rect key="frame" x="3" y="6" width="72" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Bpl-As-mOT" secondAttribute="bottom" constant="6" id="X3Y-xs-llw"/>
+                            <constraint firstItem="Bpl-As-mOT" firstAttribute="leading" secondItem="y0a-F1-dUQ" secondAttribute="leading" constant="3" id="Zqq-an-jsG"/>
+                            <constraint firstItem="Bpl-As-mOT" firstAttribute="top" secondItem="y0a-F1-dUQ" secondAttribute="top" constant="6" id="ame-eD-GhD"/>
+                            <constraint firstAttribute="trailing" secondItem="Bpl-As-mOT" secondAttribute="trailing" constant="3" id="avA-6V-DIc"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Время начисление кешбека" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vnU-h6-gT6">
+                        <rect key="frame" x="16" y="197" width="240" height="21"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="paymentTime" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="26A-zn-fgI">
+                        <rect key="frame" x="16" y="226" width="120" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="NPF-qv-IBl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="26n-My-SsK"/>
+                    <constraint firstItem="26A-zn-fgI" firstAttribute="top" secondItem="vnU-h6-gT6" secondAttribute="bottom" constant="8" id="7c1-mu-K5u"/>
+                    <constraint firstItem="vCj-bB-tzt" firstAttribute="top" secondItem="enl-Yy-zEs" secondAttribute="bottom" constant="17" id="Ckv-8e-axl"/>
+                    <constraint firstItem="aCK-bd-cXi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="CuW-X2-Azj"/>
+                    <constraint firstAttribute="trailing" secondItem="NPF-qv-IBl" secondAttribute="trailing" constant="226" id="E9A-nl-QSy"/>
+                    <constraint firstAttribute="trailing" secondItem="vCj-bB-tzt" secondAttribute="trailing" constant="149" id="GlB-wK-wv3"/>
+                    <constraint firstItem="aCK-bd-cXi" firstAttribute="top" secondItem="vCj-bB-tzt" secondAttribute="bottom" constant="18" id="Jk5-l2-0JR"/>
+                    <constraint firstAttribute="trailing" secondItem="enl-Yy-zEs" secondAttribute="trailing" constant="16" id="LCj-Ws-a0T"/>
+                    <constraint firstItem="NPF-qv-IBl" firstAttribute="top" secondItem="aCK-bd-cXi" secondAttribute="bottom" constant="8" id="Ldh-be-xRC"/>
+                    <constraint firstItem="y0a-F1-dUQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="UeW-9k-Wku"/>
+                    <constraint firstItem="vnU-h6-gT6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Vxp-M1-Quf"/>
+                    <constraint firstItem="y0a-F1-dUQ" firstAttribute="top" secondItem="NPF-qv-IBl" secondAttribute="bottom" constant="7" id="XlK-E7-kMP"/>
+                    <constraint firstItem="enl-Yy-zEs" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="cIW-tG-VUu"/>
+                    <constraint firstItem="26A-zn-fgI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="cad-Xz-aA9"/>
+                    <constraint firstItem="vCj-bB-tzt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="6" id="hvb-zu-9Of"/>
+                    <constraint firstAttribute="trailing" secondItem="aCK-bd-cXi" secondAttribute="trailing" constant="16" id="jTz-Xz-H7A"/>
+                    <constraint firstAttribute="trailing" secondItem="y0a-F1-dUQ" secondAttribute="trailing" constant="226" id="ogs-n9-TCw"/>
+                    <constraint firstAttribute="trailing" secondItem="vnU-h6-gT6" secondAttribute="trailing" constant="64" id="puI-fF-grT"/>
+                    <constraint firstItem="enl-Yy-zEs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="r91-9m-vyz"/>
+                    <constraint firstItem="vnU-h6-gT6" firstAttribute="top" secondItem="y0a-F1-dUQ" secondAttribute="bottom" constant="8" id="utr-d6-79w"/>
+                    <constraint firstAttribute="trailing" secondItem="26A-zn-fgI" secondAttribute="trailing" constant="184" id="zE3-PS-6nU"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="cashBachValue" destination="Bpl-As-mOT" id="5ZV-VD-iEO"/>
+                <outlet property="cashBackPaymentTime" destination="26A-zn-fgI" id="5dc-88-BzQ"/>
+                <outlet property="marketLogo" destination="vCj-bB-tzt" id="G0c-oO-CMW"/>
+                <outlet property="productCost" destination="aCK-bd-cXi" id="uSS-XV-VUM"/>
+                <outlet property="productTitle" destination="enl-Yy-zEs" id="N5o-6n-3fJ"/>
+                <outlet property="viewForCashback" destination="y0a-F1-dUQ" id="Wca-sp-Yrg"/>
+            </connections>
+            <point key="canvasLocation" x="69.565217391304358" y="95.758928571428569"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

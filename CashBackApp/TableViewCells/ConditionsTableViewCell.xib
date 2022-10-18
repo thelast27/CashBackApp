@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="ConditionsTableViewCell" customModule="CashBackApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DWt-lt-idV">
+                        <rect key="frame" x="16" y="12" width="37.5" height="21"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                        <color key="textColor" red="0.91614468490000001" green="0.33414371679999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UYH-0Y-2pE">
+                        <rect key="frame" x="63" y="12" width="251" height="21"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="UYH-0Y-2pE" firstAttribute="leading" secondItem="DWt-lt-idV" secondAttribute="trailing" constant="9.5" id="1IU-TO-imf"/>
+                    <constraint firstAttribute="trailing" secondItem="UYH-0Y-2pE" secondAttribute="trailing" constant="6" id="90x-gO-EP5"/>
+                    <constraint firstItem="DWt-lt-idV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="Nch-eW-KED"/>
+                    <constraint firstAttribute="bottom" secondItem="UYH-0Y-2pE" secondAttribute="bottom" constant="11" id="Tgp-dS-O2h"/>
+                    <constraint firstAttribute="bottom" secondItem="DWt-lt-idV" secondAttribute="bottom" constant="11" id="Tjg-1U-2pf"/>
+                    <constraint firstItem="UYH-0Y-2pE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="ZLk-R7-PYD"/>
+                    <constraint firstItem="DWt-lt-idV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="eyY-4V-5Fl"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="actionTextLabel" destination="UYH-0Y-2pE" id="62Y-DC-YVq"/>
+                <outlet property="cashBackLabel" destination="DWt-lt-idV" id="TuS-2W-QnD"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="84.375"/>
+        </tableViewCell>
+    </objects>
+</document>
