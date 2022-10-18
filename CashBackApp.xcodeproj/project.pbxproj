@@ -100,6 +100,7 @@
 				4D192CD528F5A2500004BCB6 /* TableViewCells */,
 				4D192CDA28F5A2BA0004BCB6 /* Storyboards */,
 				4DEE839A28FEAFE7005EDE61 /* Manager */,
+				4DEE839C28FEB043005EDE61 /* CollectionViewCells */,
 				4DEE839B28FEAFEF005EDE61 /* Model */,
 			);
 			path = CashBackApp;
@@ -169,8 +170,6 @@
 		4DEE839928FEAF89005EDE61 /* ItemInfoCells */ = {
 			isa = PBXGroup;
 			children = (
-				4DF9B4E528F8383E007052CD /* ItemPhotoCollectionViewCell.xib */,
-				4DF9B4E428F8383E007052CD /* ItemPhotoCollectionViewCell.swift */,
 				4D9CB4B528FD926D00C3B2B0 /* ConditionsTableViewCell.swift */,
 				4D9CB4B628FD926D00C3B2B0 /* ConditionsTableViewCell.xib */,
 				4DEE839528FE835F005EDE61 /* ItemInfoTableViewCell.swift */,
@@ -193,6 +192,23 @@
 				4D34C7E028F5AAB1000FB24E /* SearchResultModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		4DEE839C28FEB043005EDE61 /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				4DEE839D28FEB050005EDE61 /* ItemInfoCells */,
+			);
+			path = CollectionViewCells;
+			sourceTree = "<group>";
+		};
+		4DEE839D28FEB050005EDE61 /* ItemInfoCells */ = {
+			isa = PBXGroup;
+			children = (
+				4DF9B4E428F8383E007052CD /* ItemPhotoCollectionViewCell.swift */,
+				4DF9B4E528F8383E007052CD /* ItemPhotoCollectionViewCell.xib */,
+			);
+			path = ItemInfoCells;
 			sourceTree = "<group>";
 		};
 		4DF98F3D28F8037A0047D425 /* SearchResultCells */ = {
