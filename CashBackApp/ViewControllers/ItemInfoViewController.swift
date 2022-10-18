@@ -11,6 +11,7 @@ class ItemInfoViewController: UIViewController {
     
     @IBOutlet weak var itemPhoto: UICollectionView!
     @IBOutlet weak var conditionsTableView: UITableView!
+    @IBOutlet weak var itemPhotoPageControl: UIPageControl!
     
     var tableViewSearchResultArray: [SearchResult]?
     var searchResultModel: [Product]?
@@ -19,7 +20,7 @@ class ItemInfoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         itemPhoto.delegate = self
         itemPhoto.dataSource = self
         
@@ -29,6 +30,8 @@ class ItemInfoViewController: UIViewController {
         conditionsTableView.dataSource = self
         conditionsTableView.register(UINib(nibName: "ConditionsTableViewCell", bundle: nil), forCellReuseIdentifier: ConditionsTableViewCell.key)
         conditionsTableView.register(UINib(nibName: "ItemInfoTableViewCell", bundle: nil), forCellReuseIdentifier: ItemInfoTableViewCell.key)
+        
+        itemPhotoPageControl.numberOfPages = clickedElement?.imageUrls?.count ?? 1
         
         
         
@@ -61,6 +64,11 @@ extension ItemInfoViewController: UICollectionViewDelegate, UICollectionViewData
             })
         }
         return cell
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let pageIndex = round(itemPhoto.contentOffset.x/view.frame.width)
+        itemPhotoPageControl.currentPage = Int(pageIndex)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
