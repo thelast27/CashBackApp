@@ -12,7 +12,7 @@ class TabBarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        guard let startVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "StartVC") as? StartViewController, let loginVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "StartVC") as? StartViewController else {return}
+        guard let startVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "StartVC") as? StartViewController, let loginVC = UIStoryboard(name: "LoginStoryboard", bundle: nil).instantiateViewController(withIdentifier: "LoginVC") as? LoginViewController else {return}
         
         
         viewControllers = [addViewController(viewController: UINavigationController(rootViewController: startVC), title: "Магазины", image: UIImage(systemName: "bag")), addViewController(viewController: UINavigationController(rootViewController: loginVC), title: "Кабинет", image: UIImage(systemName: "person.circle"))]
