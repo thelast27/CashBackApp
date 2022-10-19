@@ -12,7 +12,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var viewForButton: UIView!
     @IBOutlet weak var numberTextField: UITextField!
     
-    var bottomLine = CALayer()
+    private let bottomLine = CALayer()
+    private var apiManagerDelegate: RestAPIProviderProtocol = APIManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,5 +28,13 @@ class LoginViewController: UIViewController {
 
     }
     
-
+    @IBAction func sendNumberPressed(_ sender: Any) {
+        guard numberTextField.hasText,
+        let number = numberTextField.text
+        else { return }
+        apiManagerDelegate.sendLoginNumber(for: number) { [weak self] login in
+            
+        }
+    }
+    
 }
