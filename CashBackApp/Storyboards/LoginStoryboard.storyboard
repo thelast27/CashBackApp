@@ -43,7 +43,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="+79001112233" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vrb-Ef-ZKB">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="+79001112233" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vrb-Ef-ZKB">
                                 <rect key="frame" x="20" y="228" width="374" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="Axo-aX-fkb"/>
@@ -105,6 +105,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="numberTextField" destination="Vrb-Ef-ZKB" id="47z-Pn-O7R"/>
                         <outlet property="viewForButton" destination="o1b-YF-FLk" id="RAJ-Lo-V6R"/>
                     </connections>
                 </viewController>
