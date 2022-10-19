@@ -25,16 +25,21 @@ class LoginViewController: UIViewController {
         bottomLine.backgroundColor = UIColor.gray.cgColor
         numberTextField.borderStyle = UITextField.BorderStyle.none
         numberTextField.layer.addSublayer(bottomLine)
-
+        
     }
-    
     @IBAction func sendNumberPressed(_ sender: Any) {
         guard numberTextField.hasText,
-        let number = numberTextField.text
+              let number = numberTextField.text
         else { return }
-        apiManagerDelegate.sendLoginNumber(for: number) { [weak self] login in
-            
+        guard let vc = UIStoryboard(name: "LoginStoryboard", bundle: nil).instantiateViewController(withIdentifier: "LoginCompleteVC") as? LoginCompleteViewController else { return }
+        apiManagerDelegate.sendLoginNumber(for: number) { login in
+            guard let explainMessage = login.explainMessage else { return }
+            DispatchQueue.main.async {
+                vc.explainTextLabel.text = explainMessage
+                vc.number = number
+            }
         }
+        navigationController?.pushViewController(vc, animated: true)
     }
     
 }

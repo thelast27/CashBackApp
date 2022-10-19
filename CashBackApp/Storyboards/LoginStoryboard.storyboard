@@ -116,6 +116,92 @@
             </objects>
             <point key="canvasLocation" x="-17.39130434782609" y="69.642857142857139"/>
         </scene>
+        <!--Login Complete View Controller-->
+        <scene sceneID="4aK-64-fGw">
+            <objects>
+                <viewController storyboardIdentifier="LoginCompleteVC" id="HE2-0y-Y05" customClass="LoginCompleteViewController" customModule="CashBackApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fca-bv-qkM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="vP7-gS-YGI">
+                                <rect key="frame" x="20" y="94" width="374" height="130"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Подтверждение телефона" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Dl-Rj-F6G">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="cXI-ub-2hf"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6h7-oi-bgw">
+                                        <rect key="frame" x="0.0" y="40" width="374" height="0.0"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="33V-hc-lF3"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите код" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="52O-0o-qUj">
+                                        <rect key="frame" x="0.0" y="50" width="374" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="gQe-RK-JWe"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H9l-lg-IAB">
+                                        <rect key="frame" x="0.0" y="90" width="374" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Mes-BL-WMj"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Отправить код ещё раз"/>
+                                        <connections>
+                                            <action selector="sendRequestAgainPressed:" destination="HE2-0y-Y05" eventType="touchUpInside" id="bbN-Vq-sUC"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="52O-0o-qUj" firstAttribute="top" secondItem="6h7-oi-bgw" secondAttribute="bottom" constant="10" id="0kS-oU-xvq"/>
+                                    <constraint firstItem="H9l-lg-IAB" firstAttribute="leading" secondItem="vP7-gS-YGI" secondAttribute="leading" id="0kx-ih-qIX"/>
+                                    <constraint firstItem="6h7-oi-bgw" firstAttribute="leading" secondItem="vP7-gS-YGI" secondAttribute="leading" id="2tm-CV-Ta1"/>
+                                    <constraint firstAttribute="trailing" secondItem="52O-0o-qUj" secondAttribute="trailing" id="8lK-5e-M0q"/>
+                                    <constraint firstAttribute="trailing" secondItem="2Dl-Rj-F6G" secondAttribute="trailing" id="9jx-eL-Dn8"/>
+                                    <constraint firstAttribute="bottom" secondItem="H9l-lg-IAB" secondAttribute="bottom" id="9oN-hJ-O9H"/>
+                                    <constraint firstAttribute="trailing" secondItem="6h7-oi-bgw" secondAttribute="trailing" id="H23-QN-mlI"/>
+                                    <constraint firstAttribute="trailing" secondItem="H9l-lg-IAB" secondAttribute="trailing" id="Xsw-GI-dAy"/>
+                                    <constraint firstItem="6h7-oi-bgw" firstAttribute="top" secondItem="2Dl-Rj-F6G" secondAttribute="bottom" constant="10" id="eBZ-wt-fD4"/>
+                                    <constraint firstItem="H9l-lg-IAB" firstAttribute="top" secondItem="52O-0o-qUj" secondAttribute="bottom" constant="10" id="l3D-dq-amJ"/>
+                                    <constraint firstItem="2Dl-Rj-F6G" firstAttribute="top" secondItem="vP7-gS-YGI" secondAttribute="top" id="swb-2U-A5H"/>
+                                    <constraint firstItem="52O-0o-qUj" firstAttribute="leading" secondItem="vP7-gS-YGI" secondAttribute="leading" id="wrP-3i-gm2"/>
+                                    <constraint firstItem="2Dl-Rj-F6G" firstAttribute="leading" secondItem="vP7-gS-YGI" secondAttribute="leading" id="zdo-3x-3Px"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="G63-dW-QP1"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="G63-dW-QP1" firstAttribute="trailing" secondItem="vP7-gS-YGI" secondAttribute="trailing" constant="20" id="QOp-2v-lcC"/>
+                            <constraint firstItem="G63-dW-QP1" firstAttribute="bottom" secondItem="vP7-gS-YGI" secondAttribute="bottom" constant="638" id="WdW-5y-UDy"/>
+                            <constraint firstItem="vP7-gS-YGI" firstAttribute="leading" secondItem="G63-dW-QP1" secondAttribute="leading" constant="20" id="o7Q-DK-Jys"/>
+                            <constraint firstItem="vP7-gS-YGI" firstAttribute="top" secondItem="G63-dW-QP1" secondAttribute="top" constant="50" id="yt3-ab-BNT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="callAgainButton" destination="H9l-lg-IAB" id="kZ1-VL-I70"/>
+                        <outlet property="explainTextLabel" destination="6h7-oi-bgw" id="uAs-gW-FTY"/>
+                        <outlet property="passwordTextField" destination="52O-0o-qUj" id="sb4-Ng-VHo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n9b-4r-lx7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="640.57971014492762" y="69.642857142857139"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="separatorColor">

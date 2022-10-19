@@ -30,6 +30,7 @@
 		4D9E756428FEF4A800735837 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9E756328FEF4A800735837 /* LoginViewController.swift */; };
 		4D9E756628FEF4B400735837 /* LoginStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D9E756528FEF4B400735837 /* LoginStoryboard.storyboard */; };
 		4D9E756828FFDB0E00735837 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9E756728FFDB0E00735837 /* LoginModel.swift */; };
+		4D9E756A28FFDD0E00735837 /* LoginCompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9E756928FFDD0E00735837 /* LoginCompleteViewController.swift */; };
 		4DEE839728FE8360005EDE61 /* ItemInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEE839528FE835F005EDE61 /* ItemInfoTableViewCell.swift */; };
 		4DEE839828FE8360005EDE61 /* ItemInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DEE839628FE8360005EDE61 /* ItemInfoTableViewCell.xib */; };
 		4DF98F3F28F803AD0047D425 /* ItemInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF98F3E28F803AD0047D425 /* ItemInfoViewController.swift */; };
@@ -64,6 +65,7 @@
 		4D9E756328FEF4A800735837 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4D9E756528FEF4B400735837 /* LoginStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginStoryboard.storyboard; sourceTree = "<group>"; };
 		4D9E756728FFDB0E00735837 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		4D9E756928FFDD0E00735837 /* LoginCompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCompleteViewController.swift; sourceTree = "<group>"; };
 		4DEE839528FE835F005EDE61 /* ItemInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemInfoTableViewCell.swift; sourceTree = "<group>"; };
 		4DEE839628FE8360005EDE61 /* ItemInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemInfoTableViewCell.xib; sourceTree = "<group>"; };
 		4DF98F3E28F803AD0047D425 /* ItemInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemInfoViewController.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				4DF98F3E28F803AD0047D425 /* ItemInfoViewController.swift */,
 				4D9E756128FEF27A00735837 /* TabBarViewController.swift */,
 				4D9E756328FEF4A800735837 /* LoginViewController.swift */,
+				4D9E756928FFDD0E00735837 /* LoginCompleteViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 				4D34C7E828F5B5F9000FB24E /* SearchResultTableViewCell.swift in Sources */,
 				4D192CBA28F551590004BCB6 /* SceneDelegate.swift in Sources */,
 				4DF98F3F28F803AD0047D425 /* ItemInfoViewController.swift in Sources */,
+				4D9E756A28FFDD0E00735837 /* LoginCompleteViewController.swift in Sources */,
 				4D9E756428FEF4A800735837 /* LoginViewController.swift in Sources */,
 				4D192CCC28F557660004BCB6 /* OpenSearchBarPageVC.swift in Sources */,
 				4D9E756228FEF27A00735837 /* TabBarViewController.swift in Sources */,
