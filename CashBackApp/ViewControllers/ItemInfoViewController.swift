@@ -56,8 +56,8 @@ extension ItemInfoViewController: UICollectionViewDelegate, UICollectionViewData
             UICollectionViewCell() }
         
         
-        if let clickedItem = clickedElement?.imageUrls {
-            clickedItem.first?.stringToImage({ (image)  in
+        if let clickedItem = clickedElement?.imageUrls?[indexPath.row] {
+            clickedItem.stringToImage({ (image)  in
                 DispatchQueue.main.async {
                     cell.imagePhoto.image = image
                 }
