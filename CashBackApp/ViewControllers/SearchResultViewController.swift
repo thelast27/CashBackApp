@@ -13,6 +13,8 @@ class SearchResultViewController: UIViewController {
     
     var tableViewSearchResultArray: [SearchResult]?
     var searchResultModel: [Product]?
+    var apiManagerDelegate: RestAPIProviderProtocol = APIManager()
+    var moreOrNot: Bool?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,5 +47,36 @@ extension SearchResultViewController: UITableViewDataSource, UITableViewDelegate
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+          return 50
+      }
+
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+
+        let sectionButton = UIButton()
+        sectionButton.setTitle(String("Ещё"),
+                               for: .normal)
+        sectionButton.setTitleColor(.blue, for: .normal)
+        sectionButton.addTarget(self,
+                                action: #selector(self.loadMore(sender:)),
+                                for: .touchUpInside)
+        return sectionButton
+    }
+    
+    @objc func loadMore(sender: UIButton) {
+        var counter = 0
+        counter += 1 //каунтер для демонстрации. Вообще я бы создал нужную проперти в модели БД и использовал её.
+        if moreOrNot == true {
+            apiManagerDelegate.getMoreSearchResults(for: title ?? "", for: counter) { data in
+                self.searchResultModel = data.products
+                DispatchQueue.main.async {
+                    self.searchResultTableView.reloadData()
+                }
+            }
+        } else {
+            print("bye")
+        }
+    }
     
 }
