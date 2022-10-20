@@ -33,27 +33,29 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Shq-2D-EbX">
-                        <rect key="frame" x="135" y="41" width="177" height="26"/>
+                        <rect key="frame" x="135" y="41" width="92" height="26"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="26" id="OP9-8H-4hS"/>
+                            <constraint firstAttribute="width" constant="92" id="Xvd-gl-0DG"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cost" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="04j-Gl-5OA">
                         <rect key="frame" x="135" y="75" width="177" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qXH-Wd-VR3">
                         <rect key="frame" x="136" y="99" width="91" height="16"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cashBack" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xk0-kY-4zS">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cashBack" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xk0-kY-4zS">
                                 <rect key="frame" x="0.0" y="0.0" width="91" height="16"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="91" id="JCN-RF-5sn"/>
                                     <constraint firstAttribute="height" constant="16" id="Trc-9q-nGx"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -79,7 +81,7 @@
                     <constraint firstItem="SBm-wi-WWb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="cQz-zX-mDI"/>
                     <constraint firstItem="Shq-2D-EbX" firstAttribute="leading" secondItem="SBm-wi-WWb" secondAttribute="trailing" constant="8" id="m1V-At-NIL"/>
                     <constraint firstAttribute="trailing" secondItem="GDb-CC-yZB" secondAttribute="trailing" constant="8" id="mJd-bf-H0L"/>
-                    <constraint firstAttribute="trailing" secondItem="Shq-2D-EbX" secondAttribute="trailing" constant="8" id="pPA-pO-IVr"/>
+                    <constraint firstAttribute="trailing" secondItem="Shq-2D-EbX" secondAttribute="trailing" constant="93" id="pPA-pO-IVr"/>
                     <constraint firstItem="qXH-Wd-VR3" firstAttribute="top" secondItem="04j-Gl-5OA" secondAttribute="bottom" constant="3" id="tSX-Z1-0vl"/>
                     <constraint firstItem="GDb-CC-yZB" firstAttribute="leading" secondItem="SBm-wi-WWb" secondAttribute="trailing" constant="8" id="uft-sA-dTn"/>
                     <constraint firstItem="04j-Gl-5OA" firstAttribute="top" secondItem="Shq-2D-EbX" secondAttribute="bottom" constant="8" id="weC-1L-YBQ"/>

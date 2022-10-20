@@ -24,6 +24,9 @@ class SearchResultTableViewCell: UITableViewCell {
         super.awakeFromNib()
         viewForCashBack.layer.cornerRadius = 8
         viewForCashBack.clipsToBounds = true
+        
+        itemTitle.lineBreakMode = .byWordWrapping
+        itemTitle.numberOfLines = 0
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
