@@ -15,6 +15,7 @@ class OpenSearchBarPageVC: UIViewController {
     var searchResultModel: [Product]?
     var searchResultsArray: [SearchResult]?
     var apiManagerDelegate: RestAPIProviderProtocol = APIManager()
+    var indicator = UIActivityIndicatorView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,8 +33,27 @@ class OpenSearchBarPageVC: UIViewController {
         
         view.addSubview(previousSearchTableView)
         
+        indicator = activityIndicator(style: .large, frame: nil, center: self.view.center)
+        indicator.color = .purple
+        view.addSubview(indicator)
+
+        
+        
     }
-    
+    //MARK: - задали размеры и позицию indicator
+    private func activityIndicator(style: UIActivityIndicatorView.Style = .medium,
+                                       frame: CGRect? = nil,
+                                       center: CGPoint? = nil) -> UIActivityIndicatorView {
+        
+        let activityIndicatorView = UIActivityIndicatorView(style: style)
+        if let frame = frame {
+            activityIndicatorView.frame = frame
+        }
+        if let center = center {
+            activityIndicatorView.center = center
+        }
+        return activityIndicatorView
+    }
 }
 
 extension OpenSearchBarPageVC: UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
@@ -57,6 +77,7 @@ extension OpenSearchBarPageVC: UITableViewDelegate, UITableViewDataSource, UISea
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        indicator.startAnimating()
         
         let text = serachHistory[indexPath.row]
         apiManagerDelegate.getSearchResults(for: text) { [weak self] resultsData in
@@ -64,7 +85,7 @@ extension OpenSearchBarPageVC: UITableViewDelegate, UITableViewDataSource, UISea
             self.searchResultModel = resultsData.products
             self.searchResultsArray?.append(resultsData)
         }
-        DispatchQueue.main.asyncAfter(wallDeadline: .now() + 1) { [weak self] in
+        DispatchQueue.main.asyncAfter(wallDeadline: .now() + 3) { [weak self] in
             guard let self = self else { return }
             guard let vc = UIStoryboard(name: "SearchResultsStoryboard", bundle: nil).instantiateViewController(withIdentifier: "SearchResultVC") as? SearchResultViewController else { return }
             vc.searchResultModel = self.searchResultModel
@@ -72,31 +93,40 @@ extension OpenSearchBarPageVC: UITableViewDelegate, UITableViewDataSource, UISea
             vc.title = text
             self.navigationController?.pushViewController(vc, animated: true
             )
+            self.indicator.stopAnimating()
         }
     }
     
+    //MARK: - функция, срабатывающая по нажатию кнопки Return в SearchBar
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        indicator.startAnimating()
         
-        guard let text = searchBar.text else { return }
-        serachHistory.append(text)
+        guard let text = searchBar.text,
+              let vc = UIStoryboard(name: "SearchResultsStoryboard", bundle: nil).instantiateViewController(withIdentifier: "SearchResultVC") as? SearchResultViewController
+        else { return }
+        
+        serachHistory.append(text) //сохранили запрос в историю. Лучше хранить в БД, но для примера сойдет.
+        
         apiManagerDelegate.getSearchResults(for: text) { [weak self] resultsData in
             guard let self = self else { return }
-            self.searchResultModel = resultsData.products
+            self.searchResultModel = resultsData.products //передали дату о запрашиваемом предмете
             self.searchResultsArray?.append(resultsData)
+            vc.searchResultModel = self.searchResultModel
+//            vc.tableViewSearchResultArray?.append(resultsData)
+            vc.moreOrNot = resultsData.more
+            DispatchQueue.main.async {
+                vc.title = text
+            }
+            
         }
         previousSearchTableView.reloadData()
-    
         
-        DispatchQueue.main.asyncAfter(wallDeadline: .now() + 5) { [weak self] in
+        DispatchQueue.main.asyncAfter(wallDeadline: .now() + 3) { [weak self] in
             guard let self = self else { return }
-            guard let vc = UIStoryboard(name: "SearchResultsStoryboard", bundle: nil).instantiateViewController(withIdentifier: "SearchResultVC") as? SearchResultViewController else { return }
-            vc.searchResultModel = self.searchResultModel
-            vc.tableViewSearchResultArray = self.searchResultsArray
-            vc.title = text
             self.navigationController?.pushViewController(vc, animated: true
             )
+            self.indicator.stopAnimating()
         }
-        
     }
 }
 
