@@ -17,10 +17,11 @@ class ItemInfoViewController: UIViewController {
     var searchResultModel: [Product]?
     var clickedElement: Product?
     var hiddenSections = Set<Int>()
+    var actionsArray: [Action] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         itemPhoto.delegate = self
         itemPhoto.dataSource = self
         
@@ -33,13 +34,11 @@ class ItemInfoViewController: UIViewController {
         
         itemPhotoPageControl.numberOfPages = clickedElement?.imageUrls?.count ?? 1
         
-        
+        guard let firstAction = clickedElement?.actions?.first else { return }
+        actionsArray.append(firstAction)
         
     }
-    
-    
-    
-    
+
 }
 
 extension ItemInfoViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UITableViewDelegate, UITableViewDataSource {
@@ -78,26 +77,20 @@ extension ItemInfoViewController: UICollectionViewDelegate, UICollectionViewData
     //MARK: - Создаем tableView
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return 2 // было 3
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         if section == 0 {
             return 1
-        } else if section == 1 {
-            return 1
         } else {
-            if hiddenSections.contains(section) {
-                return 0
-            }
-            return clickedElement?.actions?.count ?? 1
+            return actionsArray.count
         }
-        
-        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         
         if indexPath.section == 0 {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: ItemInfoTableViewCell.key, for: indexPath) as? ItemInfoTableViewCell else { return UITableViewCell() }
@@ -105,21 +98,12 @@ extension ItemInfoViewController: UICollectionViewDelegate, UICollectionViewData
                 cell.configuration(data: productInfo)
             }
             return cell
-            
-        } else if indexPath.section == 1 {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: ConditionsTableViewCell.key, for: indexPath) as? ConditionsTableViewCell else { return UITableViewCell() }
-            cell.cashBackLabel.text = clickedElement?.actions?.first?.value
-            cell.actionTextLabel.text = clickedElement?.actions?.first?.text
-            return cell
         } else {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: ConditionsTableViewCell.key, for: indexPath) as? ConditionsTableViewCell else { return UITableViewCell() }
-            cell.cashBackLabel.text = clickedElement?.actions?[indexPath.row].value
-            cell.actionTextLabel.text = clickedElement?.actions?[indexPath.row].text
+            cell.cashBackLabel.text = actionsArray[indexPath.row].value
+            cell.actionTextLabel.text = actionsArray[indexPath.row].text
             return cell
         }
-        
-        
-        
         
     }
     
@@ -136,7 +120,7 @@ extension ItemInfoViewController: UICollectionViewDelegate, UICollectionViewData
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-       return ""
+        return ""
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -151,63 +135,37 @@ extension ItemInfoViewController: UICollectionViewDelegate, UICollectionViewData
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
-        if section == 0 {
-            return nil
-        } else if section == 1 {
-            
-            let headerView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: tableView.frame.width, height: 20))
-            
-            let label = UILabel()
-            label.frame = CGRect.init(x: 16, y: 0, width: headerView.frame.width, height: headerView.frame.height)
-            label.text = "Условия"
-            label.font = .boldSystemFont(ofSize: 20)
-            label.textColor = .black
-            
-            headerView.addSubview(label)
-            
-            return headerView
-        } else {
-            
+        guard let actionsQty = clickedElement?.actions?.count else { return UIView() }
+        if actionsQty > 1 {
             let sectionButton = UIButton()
-            
             sectionButton.setTitle(String("Развернуть"),
                                    for: .normal)
             sectionButton.setTitleColor(.blue, for: .normal)
-            
             sectionButton.tag = section
             sectionButton.addTarget(self,
-                                    action: #selector(self.hideSection(sender:)),
+                                    action: #selector(self.hideRows(sender:)),
                                     for: .touchUpInside)
-            
             return sectionButton
+        } else {
+            return UIView()
         }
+        
         
     }
     
     @objc
-    private func hideSection(sender: UIButton) {
-        let section = sender.tag
+    private func hideRows(sender: UIButton) {
         
-        func indexPathsForSection() -> [IndexPath] {
-            var indexPaths = [IndexPath]()
-            
-            for row in 0..<(self.clickedElement?.actions?.count ?? 1) {
-                indexPaths.append(IndexPath(row: row,
-                                            section: section))
-            }
-            
-            return indexPaths
-        }
-        
-        if self.hiddenSections.contains(section) {
-            self.hiddenSections.remove(section)
-            self.conditionsTableView.insertRows(at: indexPathsForSection(),
-                                                with: .fade)
+        guard let newActions = clickedElement?.actions?.dropFirst() else { return }
+        if actionsArray.count == 1 {
+            actionsArray.insert(contentsOf: newActions, at: 1)
+            conditionsTableView.reloadData()
         } else {
-            self.hiddenSections.insert(section)
-            self.conditionsTableView.deleteRows(at: indexPathsForSection(),
-                                                with: .fade)
+            actionsArray.removeLast(newActions.count)
+            conditionsTableView.reloadData()
         }
+        
+        
     }
     
     
