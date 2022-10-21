@@ -95,6 +95,7 @@ extension OpenSearchBarPageVC: UITableViewDelegate, UITableViewDataSource, UISea
             )
             self.indicator.stopAnimating()
         }
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     //MARK: - функция, срабатывающая по нажатию кнопки Return в SearchBar

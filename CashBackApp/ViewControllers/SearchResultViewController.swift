@@ -45,6 +45,7 @@ extension SearchResultViewController: UITableViewDataSource, UITableViewDelegate
         vc.tableViewSearchResultArray = tableViewSearchResultArray
         vc.clickedElement = searchResultModel?[indexPath.row]
         self.navigationController?.pushViewController(vc, animated: true)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     
