@@ -112,8 +112,6 @@ extension OpenSearchBarPageVC: UITableViewDelegate, UITableViewDataSource, UISea
             self.searchResultModel = resultsData.products //передали дату о запрашиваемом предмете
             self.searchResultsArray?.append(resultsData)
             vc.searchResultModel = self.searchResultModel
-//            vc.tableViewSearchResultArray?.append(resultsData)
-            vc.moreOrNot = resultsData.more
             DispatchQueue.main.async {
                 vc.title = text
             }
