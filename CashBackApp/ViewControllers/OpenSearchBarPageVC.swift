@@ -37,14 +37,14 @@ class OpenSearchBarPageVC: UIViewController {
         indicator = activityIndicator(style: .large, frame: nil, center: self.view.center)
         indicator.color = .purple
         view.addSubview(indicator)
-
+        
         
         
     }
     //MARK: - задали размеры и позицию indicator
     private func activityIndicator(style: UIActivityIndicatorView.Style = .medium,
-                                       frame: CGRect? = nil,
-                                       center: CGPoint? = nil) -> UIActivityIndicatorView {
+                                   frame: CGRect? = nil,
+                                   center: CGPoint? = nil) -> UIActivityIndicatorView {
         
         let activityIndicatorView = UIActivityIndicatorView(style: style)
         if let frame = frame {
@@ -79,23 +79,27 @@ extension OpenSearchBarPageVC: UITableViewDelegate, UITableViewDataSource, UISea
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         indicator.startAnimating()
+        guard let vc = UIStoryboard(name: "SearchResultsStoryboard", bundle: nil).instantiateViewController(withIdentifier: "SearchResultVC") as? SearchResultViewController else { return }
         
         let text = serachHistory[indexPath.row]
         apiManagerDelegate.getSearchResults(for: text) { [weak self] resultsData in
             guard let self = self else { return }
             self.searchResultModel = resultsData.products
             self.searchResultsArray?.append(resultsData)
-        }
-        DispatchQueue.main.asyncAfter(wallDeadline: .now() + 3) { [weak self] in
-            guard let self = self else { return }
-            guard let vc = UIStoryboard(name: "SearchResultsStoryboard", bundle: nil).instantiateViewController(withIdentifier: "SearchResultVC") as? SearchResultViewController else { return }
+            
             vc.searchResultModel = self.searchResultModel
             vc.tableViewSearchResultArray = self.searchResultsArray
-            vc.title = text
-            self.navigationController?.pushViewController(vc, animated: true
-            )
-            self.indicator.stopAnimating()
+            DispatchQueue.main.async {
+                vc.title = text
+            }
         }
+        repeat {
+            self.indicator.startAnimating()
+        } while vc.searchResultModel == nil
+        self.navigationController?.pushViewController(vc, animated: true
+        )
+        
+        self.indicator.stopAnimating()
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
@@ -123,12 +127,13 @@ extension OpenSearchBarPageVC: UITableViewDelegate, UITableViewDataSource, UISea
         }
         previousSearchTableView.reloadData()
         
-        DispatchQueue.main.asyncAfter(wallDeadline: .now() + 3) { [weak self] in
-            guard let self = self else { return }
-            self.navigationController?.pushViewController(vc, animated: true
-            )
-            self.indicator.stopAnimating()
-        }
+        repeat {
+            indicator.startAnimating()
+        } while vc.searchResultModel == nil
+        self.navigationController?.pushViewController(vc, animated: true
+        )
+        self.indicator.stopAnimating()
+        
     }
 }
 

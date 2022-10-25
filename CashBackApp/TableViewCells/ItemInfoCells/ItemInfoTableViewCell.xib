@@ -51,10 +51,11 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y0a-F1-dUQ">
-                        <rect key="frame" x="16" y="156" width="78" height="33"/>
+                        <rect key="frame" x="16" y="156" width="155" height="33"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" %%%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bpl-As-mOT">
-                                <rect key="frame" x="3" y="6" width="72" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=" %%%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bpl-As-mOT">
+                                <rect key="frame" x="0.0" y="0.0" width="155" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -62,10 +63,8 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemPinkColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="Bpl-As-mOT" secondAttribute="bottom" constant="6" id="X3Y-xs-llw"/>
-                            <constraint firstItem="Bpl-As-mOT" firstAttribute="leading" secondItem="y0a-F1-dUQ" secondAttribute="leading" constant="3" id="Zqq-an-jsG"/>
-                            <constraint firstItem="Bpl-As-mOT" firstAttribute="top" secondItem="y0a-F1-dUQ" secondAttribute="top" constant="6" id="ame-eD-GhD"/>
-                            <constraint firstAttribute="trailing" secondItem="Bpl-As-mOT" secondAttribute="trailing" constant="3" id="avA-6V-DIc"/>
+                            <constraint firstAttribute="height" constant="33" id="DJx-4o-4tc"/>
+                            <constraint firstAttribute="width" constant="155" id="wrx-EJ-xIx"/>
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Время начисление кешбека" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vnU-h6-gT6">
@@ -87,7 +86,6 @@
                     <constraint firstItem="vCj-bB-tzt" firstAttribute="top" secondItem="enl-Yy-zEs" secondAttribute="bottom" constant="17" id="Ckv-8e-axl"/>
                     <constraint firstItem="aCK-bd-cXi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="CuW-X2-Azj"/>
                     <constraint firstAttribute="trailing" secondItem="NPF-qv-IBl" secondAttribute="trailing" constant="226" id="E9A-nl-QSy"/>
-                    <constraint firstAttribute="trailing" secondItem="vCj-bB-tzt" secondAttribute="trailing" constant="149" id="GlB-wK-wv3"/>
                     <constraint firstItem="aCK-bd-cXi" firstAttribute="top" secondItem="vCj-bB-tzt" secondAttribute="bottom" constant="18" id="Jk5-l2-0JR"/>
                     <constraint firstAttribute="trailing" secondItem="enl-Yy-zEs" secondAttribute="trailing" constant="16" id="LCj-Ws-a0T"/>
                     <constraint firstItem="NPF-qv-IBl" firstAttribute="top" secondItem="aCK-bd-cXi" secondAttribute="bottom" constant="8" id="Ldh-be-xRC"/>
@@ -98,7 +96,6 @@
                     <constraint firstItem="26A-zn-fgI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="cad-Xz-aA9"/>
                     <constraint firstItem="vCj-bB-tzt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="6" id="hvb-zu-9Of"/>
                     <constraint firstAttribute="trailing" secondItem="aCK-bd-cXi" secondAttribute="trailing" constant="16" id="jTz-Xz-H7A"/>
-                    <constraint firstAttribute="trailing" secondItem="y0a-F1-dUQ" secondAttribute="trailing" constant="226" id="ogs-n9-TCw"/>
                     <constraint firstAttribute="trailing" secondItem="vnU-h6-gT6" secondAttribute="trailing" constant="64" id="puI-fF-grT"/>
                     <constraint firstItem="enl-Yy-zEs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="r91-9m-vyz"/>
                     <constraint firstItem="vnU-h6-gT6" firstAttribute="top" secondItem="y0a-F1-dUQ" secondAttribute="bottom" constant="8" id="utr-d6-79w"/>
