@@ -13,6 +13,7 @@ class OpenSearchBarPageVC: UIViewController {
     var serachHistory: [String] = []
     let previousSearchTableView = UITableView()
     var searchResultModel: [Product]?
+    var searchResultModelCompany: [JSONAny]?
     var searchResultsArray: [SearchResult]?
     var apiManagerDelegate: RestAPIProviderProtocol = APIManager()
     var indicator = UIActivityIndicatorView()
@@ -111,8 +112,10 @@ extension OpenSearchBarPageVC: UITableViewDelegate, UITableViewDataSource, UISea
         apiManagerDelegate.getSearchResults(for: text) { [weak self] resultsData in
             guard let self = self else { return }
             self.searchResultModel = resultsData.products //передали дату о запрашиваемом предмете
-            self.searchResultsArray?.append(resultsData)
+            self.searchResultModelCompany = resultsData.campaigns
+            self.searchResultsArray?.append(resultsData) //для чего передаю?
             vc.searchResultModel = self.searchResultModel
+            vc.searchResultModelCompany = self.searchResultModelCompany
             DispatchQueue.main.async {
                 vc.title = text
             }

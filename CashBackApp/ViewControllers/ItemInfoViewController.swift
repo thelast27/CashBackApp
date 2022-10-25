@@ -24,7 +24,6 @@ class ItemInfoViewController: UIViewController {
         
         itemPhoto.delegate = self
         itemPhoto.dataSource = self
-        
         itemPhoto.register(UINib(nibName: "ItemPhotoCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: ItemPhotoCollectionViewCell.key)
         
         conditionsTableView.delegate = self
