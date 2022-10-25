@@ -30,6 +30,7 @@
 		4D87121129069C8E00967106 /* CompaniesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D87120F29069C8E00967106 /* CompaniesCollectionViewCell.xib */; };
 		4D9C867329080BE500A9ED59 /* OpenSearchBarPageVC+Extesnion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9C867229080BE500A9ED59 /* OpenSearchBarPageVC+Extesnion.swift */; };
 		4D9C867529080DFD00A9ED59 /* SearchResultViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9C867429080DFD00A9ED59 /* SearchResultViewController+Extension.swift */; };
+		4D9C867729080FE000A9ED59 /* ItemInfoViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9C867629080FE000A9ED59 /* ItemInfoViewController+Extension.swift */; };
 		4D9CB4B728FD926D00C3B2B0 /* ConditionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9CB4B528FD926D00C3B2B0 /* ConditionsTableViewCell.swift */; };
 		4D9CB4B828FD926D00C3B2B0 /* ConditionsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D9CB4B628FD926D00C3B2B0 /* ConditionsTableViewCell.xib */; };
 		4D9E756428FEF4A800735837 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9E756328FEF4A800735837 /* LoginViewController.swift */; };
@@ -70,6 +71,7 @@
 		4D87120F29069C8E00967106 /* CompaniesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompaniesCollectionViewCell.xib; sourceTree = "<group>"; };
 		4D9C867229080BE500A9ED59 /* OpenSearchBarPageVC+Extesnion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OpenSearchBarPageVC+Extesnion.swift"; sourceTree = "<group>"; };
 		4D9C867429080DFD00A9ED59 /* SearchResultViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchResultViewController+Extension.swift"; sourceTree = "<group>"; };
+		4D9C867629080FE000A9ED59 /* ItemInfoViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ItemInfoViewController+Extension.swift"; sourceTree = "<group>"; };
 		4D9CB4B528FD926D00C3B2B0 /* ConditionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionsTableViewCell.swift; sourceTree = "<group>"; };
 		4D9CB4B628FD926D00C3B2B0 /* ConditionsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConditionsTableViewCell.xib; sourceTree = "<group>"; };
 		4D9E756328FEF4A800735837 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 			children = (
 				4D9C867229080BE500A9ED59 /* OpenSearchBarPageVC+Extesnion.swift */,
 				4D9C867429080DFD00A9ED59 /* SearchResultViewController+Extension.swift */,
+				4D9C867629080FE000A9ED59 /* ItemInfoViewController+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -357,6 +360,7 @@
 				4D192CBA28F551590004BCB6 /* SceneDelegate.swift in Sources */,
 				4DF98F3F28F803AD0047D425 /* ItemInfoViewController.swift in Sources */,
 				4D87121029069C8E00967106 /* CompaniesCollectionViewCell.swift in Sources */,
+				4D9C867729080FE000A9ED59 /* ItemInfoViewController+Extension.swift in Sources */,
 				4D9E756A28FFDD0E00735837 /* LoginCompleteViewController.swift in Sources */,
 				4D9E756428FEF4A800735837 /* LoginViewController.swift in Sources */,
 				4D192CCC28F557660004BCB6 /* OpenSearchBarPageVC.swift in Sources */,
