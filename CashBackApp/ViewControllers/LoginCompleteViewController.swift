@@ -10,7 +10,7 @@ import UIKit
 class LoginCompleteViewController: UIViewController {
     
     private let bottomLine = CALayer()
-    @IBOutlet weak var explainTextLabel: UILabel!
+    @IBOutlet weak var explainTextLabel: UITextView!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var callAgainButton: UIButton!
     private var apiManagerDelegate: RestAPIProviderProtocol = APIManager()
@@ -25,8 +25,7 @@ class LoginCompleteViewController: UIViewController {
         bottomLine.backgroundColor = UIColor.gray.cgColor
         passwordTextField.borderStyle = UITextField.BorderStyle.none
         passwordTextField.layer.addSublayer(bottomLine)
-        explainTextLabel.lineBreakMode = .byTruncatingTail
-        explainTextLabel.numberOfLines = 0
+
         
         callAgainButton.isEnabled = false
         DispatchQueue.main.asyncAfter(deadline: .now() + 60) {
