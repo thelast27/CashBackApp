@@ -137,8 +137,14 @@ extension ItemInfoViewController: UICollectionViewDelegate, UICollectionViewData
         guard let actionsQty = clickedElement?.actions?.count else { return UIView() }
         if actionsQty > 1 {
             let sectionButton = UIButton()
-            sectionButton.setTitle(String("Развернуть"),
-                                   for: .normal)
+            if actionsArray.count == 1 {
+                sectionButton.setTitle(String("Развернуть"),
+                                       for: .normal)
+            } else {
+                sectionButton.setTitle(String("Скрыть"),
+                                       for: .normal)
+            }
+           
             sectionButton.setTitleColor(.blue, for: .normal)
             sectionButton.tag = section
             sectionButton.addTarget(self,

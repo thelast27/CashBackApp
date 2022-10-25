@@ -16,18 +16,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="6Hi-X9-E8U">
-                                <rect key="frame" x="0.0" y="77" width="414" height="819"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="6Hi-X9-E8U">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="6Hi-X9-E8U" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="33" id="7KQ-kS-TmX"/>
                             <constraint firstItem="6Hi-X9-E8U" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="88Q-Be-zit"/>
                             <constraint firstItem="6Hi-X9-E8U" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="O4p-Bp-RR8"/>
                             <constraint firstAttribute="bottom" secondItem="6Hi-X9-E8U" secondAttribute="bottom" id="UyP-QM-pJX"/>
+                            <constraint firstItem="6Hi-X9-E8U" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="ZIb-mo-IcM"/>
                         </constraints>
                     </view>
                     <connections>
