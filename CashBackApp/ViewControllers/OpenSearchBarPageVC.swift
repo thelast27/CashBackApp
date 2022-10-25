@@ -15,7 +15,7 @@ class OpenSearchBarPageVC: UIViewController {
     var serachHistory: [String] = []
     var searchResultModel: [Product]?
     var searchResultModelCompany: [JSONAny]? //пока избыточная переменная, в процессе работы над магазинами, которые вовзаращет api. Не решено ещё преобразовывать всё в массив или работать через словарь как есть. 
-    var apiManagerDelegate: RestAPIProviderProtocol = APIManager()
+    let apiManagerDelegate: RestAPIProviderProtocol = APIManager()
     var indicator = UIActivityIndicatorView()
     
     override func viewDidLoad() {
