@@ -23,6 +23,10 @@ class StartViewController: UIViewController {
 
     }
 
+    @IBAction func loginPressed(_ sender: Any) {
+      guard let loginVC = UIStoryboard(name: "LoginStoryboard", bundle: nil).instantiateViewController(withIdentifier: "LoginVC") as? LoginViewController else { return }
+        navigationController?.pushViewController(loginVC, animated: true)
+    }
     @IBAction func searchButtonPressed(_ sender: Any) {
         guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "OpenSearchBarPage") as? OpenSearchBarPageVC else { return }
         navigationController?.pushViewController(vc, animated: true)

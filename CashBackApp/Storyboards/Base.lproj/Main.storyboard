@@ -17,18 +17,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="WYG-ch-2sh">
-                                <rect key="frame" x="12" y="491" width="390" height="120"/>
+                                <rect key="frame" x="12" y="388" width="390" height="120"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h5J-YP-Tnl">
                                         <rect key="frame" x="0.0" y="0.0" width="390" height="50"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="wQg-WA-F9O"/>
+                                            <constraint firstAttribute="height" constant="50" id="RpT-wm-dya"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="Войти">
                                             <color key="baseForegroundColor" systemColor="labelColor"/>
                                             <color key="baseBackgroundColor" systemColor="systemGray2Color"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="loginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aJl-4Q-yXz"/>
+                                        </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ggW-H4-JSe">
                                         <rect key="frame" x="0.0" y="50" width="390" height="70"/>
@@ -65,23 +68,22 @@
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="h5J-YP-Tnl" firstAttribute="leading" secondItem="WYG-ch-2sh" secondAttribute="leading" id="6dY-pp-34G"/>
-                                    <constraint firstItem="ggW-H4-JSe" firstAttribute="top" secondItem="h5J-YP-Tnl" secondAttribute="bottom" id="95a-dx-egx"/>
-                                    <constraint firstAttribute="trailing" secondItem="ggW-H4-JSe" secondAttribute="trailing" id="Fyp-il-IaM"/>
-                                    <constraint firstItem="h5J-YP-Tnl" firstAttribute="top" secondItem="WYG-ch-2sh" secondAttribute="top" id="O0d-ot-eA3"/>
-                                    <constraint firstAttribute="bottom" secondItem="ggW-H4-JSe" secondAttribute="bottom" id="Ywt-eb-pjB"/>
-                                    <constraint firstAttribute="trailing" secondItem="h5J-YP-Tnl" secondAttribute="trailing" id="eMN-eN-NaJ"/>
-                                    <constraint firstItem="ggW-H4-JSe" firstAttribute="leading" secondItem="WYG-ch-2sh" secondAttribute="leading" id="ywo-cj-zaN"/>
+                                    <constraint firstItem="h5J-YP-Tnl" firstAttribute="leading" secondItem="WYG-ch-2sh" secondAttribute="leading" id="7vN-sq-cQ8"/>
+                                    <constraint firstItem="h5J-YP-Tnl" firstAttribute="top" secondItem="WYG-ch-2sh" secondAttribute="top" id="9Gr-sV-OZa"/>
+                                    <constraint firstAttribute="trailing" secondItem="ggW-H4-JSe" secondAttribute="trailing" id="Lb8-sM-V8x"/>
+                                    <constraint firstAttribute="trailing" secondItem="h5J-YP-Tnl" secondAttribute="trailing" id="N9p-9U-91u"/>
+                                    <constraint firstItem="ggW-H4-JSe" firstAttribute="top" secondItem="h5J-YP-Tnl" secondAttribute="bottom" id="SS4-L1-8Ii"/>
+                                    <constraint firstAttribute="bottom" secondItem="ggW-H4-JSe" secondAttribute="bottom" id="ogW-EL-W8M"/>
+                                    <constraint firstItem="ggW-H4-JSe" firstAttribute="leading" secondItem="WYG-ch-2sh" secondAttribute="leading" id="yaJ-xS-zKH"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                         <constraints>
-                            <constraint firstItem="WYG-ch-2sh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="12" id="1h2-8H-zyQ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="WYG-ch-2sh" secondAttribute="bottom" constant="251" id="GtR-HU-BtG"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WYG-ch-2sh" secondAttribute="trailing" constant="12" id="LRK-XC-nZx"/>
-                            <constraint firstItem="WYG-ch-2sh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="447" id="qS9-Ze-llg"/>
+                            <constraint firstItem="WYG-ch-2sh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="12" id="Yug-Xb-gvy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="WYG-ch-2sh" secondAttribute="bottom" constant="354" id="cVx-tq-dv0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WYG-ch-2sh" secondAttribute="trailing" constant="12" id="nH0-VX-lCZ"/>
                         </constraints>
                     </view>
                     <connections>
