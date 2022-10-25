@@ -21,7 +21,7 @@ class CompaniesCollectionViewCell: UICollectionViewCell {
         cashBackBackgound.layer.cornerRadius = 12
         cashBackBackgound.clipsToBounds = true
         
-        
+        //настроили тени для ячейки
         self.layer.cornerRadius = 15.0
         self.layer.borderWidth = 1.0
         self.layer.shadowColor = UIColor.gray.cgColor

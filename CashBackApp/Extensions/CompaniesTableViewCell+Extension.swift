@@ -29,7 +29,7 @@ extension CompaniesTableViewCell: UICollectionViewDataSource, UICollectionViewDe
         }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(indexPath.row)
+        //здесь будет переход на страницу магаизна по тапу
     }
     
 }

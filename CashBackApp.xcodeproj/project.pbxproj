@@ -31,6 +31,7 @@
 		4D9C867729080FE000A9ED59 /* ItemInfoViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9C867629080FE000A9ED59 /* ItemInfoViewController+Extension.swift */; };
 		4D9C8679290812B800A9ED59 /* String+Extesnion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9C8678290812B800A9ED59 /* String+Extesnion.swift */; };
 		4D9C867B2908136400A9ED59 /* CompaniesTableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9C867A2908136400A9ED59 /* CompaniesTableViewCell+Extension.swift */; };
+		4D9C867D290813F200A9ED59 /* Endpoint+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9C867C290813F200A9ED59 /* Endpoint+Extension.swift */; };
 		4D9CB4B728FD926D00C3B2B0 /* ConditionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9CB4B528FD926D00C3B2B0 /* ConditionsTableViewCell.swift */; };
 		4D9CB4B828FD926D00C3B2B0 /* ConditionsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D9CB4B628FD926D00C3B2B0 /* ConditionsTableViewCell.xib */; };
 		4D9E756428FEF4A800735837 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9E756328FEF4A800735837 /* LoginViewController.swift */; };
@@ -72,6 +73,7 @@
 		4D9C867629080FE000A9ED59 /* ItemInfoViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ItemInfoViewController+Extension.swift"; sourceTree = "<group>"; };
 		4D9C8678290812B800A9ED59 /* String+Extesnion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extesnion.swift"; sourceTree = "<group>"; };
 		4D9C867A2908136400A9ED59 /* CompaniesTableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CompaniesTableViewCell+Extension.swift"; sourceTree = "<group>"; };
+		4D9C867C290813F200A9ED59 /* Endpoint+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Endpoint+Extension.swift"; sourceTree = "<group>"; };
 		4D9CB4B528FD926D00C3B2B0 /* ConditionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionsTableViewCell.swift; sourceTree = "<group>"; };
 		4D9CB4B628FD926D00C3B2B0 /* ConditionsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConditionsTableViewCell.xib; sourceTree = "<group>"; };
 		4D9E756328FEF4A800735837 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 				4D9C867629080FE000A9ED59 /* ItemInfoViewController+Extension.swift */,
 				4D9C8678290812B800A9ED59 /* String+Extesnion.swift */,
 				4D9C867A2908136400A9ED59 /* CompaniesTableViewCell+Extension.swift */,
+				4D9C867C290813F200A9ED59 /* Endpoint+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -338,6 +341,7 @@
 				4D87120C29068C6800967106 /* CompaniesTableViewCell.swift in Sources */,
 				4D34C7E528F5B060000FB24E /* SearchResultViewController.swift in Sources */,
 				4D192CBC28F551590004BCB6 /* StartViewController.swift in Sources */,
+				4D9C867D290813F200A9ED59 /* Endpoint+Extension.swift in Sources */,
 				4D192CB828F551590004BCB6 /* AppDelegate.swift in Sources */,
 				4DEE839728FE8360005EDE61 /* ItemInfoTableViewCell.swift in Sources */,
 				4DF9B4E628F8383E007052CD /* ItemPhotoCollectionViewCell.swift in Sources */,
