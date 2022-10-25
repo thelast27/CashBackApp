@@ -16,16 +16,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="yrd-Bj-hbt">
-                                <rect key="frame" x="12" y="300" width="390" height="562"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="WYG-ch-2sh">
+                                <rect key="frame" x="12" y="491" width="390" height="120"/>
                                 <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h5J-YP-Tnl">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="wQg-WA-F9O"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Войти">
+                                            <color key="baseForegroundColor" systemColor="labelColor"/>
+                                            <color key="baseBackgroundColor" systemColor="systemGray2Color"/>
+                                        </buttonConfiguration>
+                                    </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ggW-H4-JSe">
-                                        <rect key="frame" x="0.0" y="0.0" width="390" height="70"/>
+                                        <rect key="frame" x="0.0" y="50" width="390" height="70"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RXm-Tn-bU4">
                                                 <rect key="frame" x="0.0" y="0.0" width="390" height="70"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="350" id="ndb-cw-3d4"/>
+                                                    <constraint firstAttribute="height" constant="70" id="YY2-ZZ-XGR"/>
                                                 </constraints>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
@@ -38,31 +49,43 @@
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="RXm-Tn-bU4" firstAttribute="leading" secondItem="ggW-H4-JSe" secondAttribute="leading" id="2f8-n9-ysx"/>
+                                            <constraint firstItem="RXm-Tn-bU4" firstAttribute="top" secondItem="ggW-H4-JSe" secondAttribute="top" id="CUQ-XD-hnO"/>
+                                            <constraint firstItem="RXm-Tn-bU4" firstAttribute="top" secondItem="ggW-H4-JSe" secondAttribute="top" id="EfJ-f4-NjB"/>
+                                            <constraint firstAttribute="trailing" secondItem="RXm-Tn-bU4" secondAttribute="trailing" id="Mdv-iM-KFd"/>
                                             <constraint firstAttribute="height" constant="70" id="Q0E-sF-AHJ"/>
                                             <constraint firstAttribute="bottom" secondItem="RXm-Tn-bU4" secondAttribute="bottom" id="cSm-hw-GAc"/>
+                                            <constraint firstAttribute="trailing" secondItem="RXm-Tn-bU4" secondAttribute="trailing" id="d2y-HP-1G9"/>
                                             <constraint firstAttribute="trailing" secondItem="RXm-Tn-bU4" secondAttribute="trailing" id="e8X-Pi-WHf"/>
+                                            <constraint firstItem="RXm-Tn-bU4" firstAttribute="leading" secondItem="ggW-H4-JSe" secondAttribute="leading" id="fGw-Id-0kf"/>
+                                            <constraint firstAttribute="bottom" secondItem="RXm-Tn-bU4" secondAttribute="bottom" id="uSY-fG-8j8"/>
                                             <constraint firstItem="RXm-Tn-bU4" firstAttribute="top" secondItem="ggW-H4-JSe" secondAttribute="top" id="uUp-EH-W5b"/>
+                                            <constraint firstItem="RXm-Tn-bU4" firstAttribute="leading" secondItem="ggW-H4-JSe" secondAttribute="leading" id="ujO-s7-jPt"/>
+                                            <constraint firstAttribute="bottom" secondItem="RXm-Tn-bU4" secondAttribute="bottom" id="ylv-H2-09O"/>
                                         </constraints>
                                     </view>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="MfZ-uc-BOP">
-                                        <rect key="frame" x="0.0" y="110" width="390" height="452"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </tableView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="h5J-YP-Tnl" firstAttribute="leading" secondItem="WYG-ch-2sh" secondAttribute="leading" id="6dY-pp-34G"/>
+                                    <constraint firstItem="ggW-H4-JSe" firstAttribute="top" secondItem="h5J-YP-Tnl" secondAttribute="bottom" id="95a-dx-egx"/>
+                                    <constraint firstAttribute="trailing" secondItem="ggW-H4-JSe" secondAttribute="trailing" id="Fyp-il-IaM"/>
+                                    <constraint firstItem="h5J-YP-Tnl" firstAttribute="top" secondItem="WYG-ch-2sh" secondAttribute="top" id="O0d-ot-eA3"/>
+                                    <constraint firstAttribute="bottom" secondItem="ggW-H4-JSe" secondAttribute="bottom" id="Ywt-eb-pjB"/>
+                                    <constraint firstAttribute="trailing" secondItem="h5J-YP-Tnl" secondAttribute="trailing" id="eMN-eN-NaJ"/>
+                                    <constraint firstItem="ggW-H4-JSe" firstAttribute="leading" secondItem="WYG-ch-2sh" secondAttribute="leading" id="ywo-cj-zaN"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                         <constraints>
-                            <constraint firstItem="yrd-Bj-hbt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4IW-mI-OOQ"/>
-                            <constraint firstItem="yrd-Bj-hbt" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="300" id="6PK-Ip-WoL"/>
-                            <constraint firstAttribute="trailing" secondItem="yrd-Bj-hbt" secondAttribute="trailing" constant="12" id="Zay-UB-eGJ"/>
-                            <constraint firstItem="yrd-Bj-hbt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="12" id="krG-cE-vf5"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yrd-Bj-hbt" secondAttribute="bottom" id="wnx-pg-d7A"/>
+                            <constraint firstItem="WYG-ch-2sh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="12" id="1h2-8H-zyQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="WYG-ch-2sh" secondAttribute="bottom" constant="251" id="GtR-HU-BtG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WYG-ch-2sh" secondAttribute="trailing" constant="12" id="LRK-XC-nZx"/>
+                            <constraint firstItem="WYG-ch-2sh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="447" id="qS9-Ze-llg"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="marketsTableView" destination="MfZ-uc-BOP" id="1A5-Kk-z6e"/>
+                        <outlet property="loginButton" destination="h5J-YP-Tnl" id="cmj-SF-wo2"/>
                         <outlet property="searchBarView" destination="ggW-H4-JSe" id="3xk-Gk-nhl"/>
                     </connections>
                 </viewController>
@@ -88,11 +111,17 @@
     </scenes>
     <resources>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
