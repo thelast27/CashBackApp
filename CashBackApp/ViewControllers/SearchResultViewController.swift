@@ -11,7 +11,6 @@ class SearchResultViewController: UIViewController {
     
     @IBOutlet weak var searchResultTableView: UITableView!
     
-    var tableViewSearchResultArray: [SearchResult]?
     var searchResultModel: [Product]?
     var searchResultModelCompany: [JSONAny]?
     
@@ -77,7 +76,6 @@ extension SearchResultViewController: UITableViewDataSource, UITableViewDelegate
         
         guard let vc = UIStoryboard(name: "ItemInfoStoryboard", bundle: nil).instantiateViewController(withIdentifier: "ItemInfoVC") as? ItemInfoViewController else { return }
         vc.searchResultModel = searchResultModel
-        vc.tableViewSearchResultArray = tableViewSearchResultArray
         vc.clickedElement = searchResultModel?[indexPath.row]
         self.navigationController?.pushViewController(vc, animated: true)
         tableView.deselectRow(at: indexPath, animated: true)

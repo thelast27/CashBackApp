@@ -9,23 +9,26 @@ import UIKit
 
 class OpenSearchBarPageVC: UIViewController {
     
-    lazy var searchBar: UISearchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: view.frame.maxX, height: 30))
-    var serachHistory: [String] = []
     let previousSearchTableView = UITableView()
+    
+    lazy private var searchBar: UISearchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: view.frame.maxX, height: 30))
+    var serachHistory: [String] = []
     var searchResultModel: [Product]?
-    var searchResultModelCompany: [JSONAny]?
-    var searchResultsArray: [SearchResult]?
+    var searchResultModelCompany: [JSONAny]? //пока избыточная переменная, в процессе работы над магазинами, которые вовзаращет api. Не решено ещё преобразовывать всё в массив или работать через словарь как есть. 
     var apiManagerDelegate: RestAPIProviderProtocol = APIManager()
     var indicator = UIActivityIndicatorView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //задали размеры, делегаты и зарегали ячейку для таблицы с историей запросов
+        
         previousSearchTableView.frame = CGRect(x: view.frame.minX, y: searchBar.frame.maxY, width: view.frame.maxX, height: view.frame.maxY)
         previousSearchTableView.delegate = self
         previousSearchTableView.dataSource = self
         previousSearchTableView.register(UINib(nibName: "PreviousSearchTableViewCell", bundle: nil), forCellReuseIdentifier: PreviousSearchTableViewCell.key)
         
+        //задали параметры и делегаты для серчбара
         searchBar.delegate = self
         searchBar.showsSearchResultsButton = true
         searchBar.placeholder = "Поиск магазинов, товаров"
@@ -34,6 +37,7 @@ class OpenSearchBarPageVC: UIViewController {
         
         view.addSubview(previousSearchTableView)
         
+        //настроили активити спинер
         indicator = activityIndicator(style: .large, frame: nil, center: self.view.center)
         indicator.color = .purple
         view.addSubview(indicator)
@@ -56,87 +60,4 @@ class OpenSearchBarPageVC: UIViewController {
         return activityIndicatorView
     }
 }
-
-extension OpenSearchBarPageVC: UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        serachHistory.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: PreviousSearchTableViewCell.key, for: indexPath) as? PreviousSearchTableViewCell else { return UITableViewCell() }
-        cell.previousSearchedItem.text = serachHistory[indexPath.row]
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Вы недавно искали"
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 44
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        indicator.startAnimating()
-        guard let vc = UIStoryboard(name: "SearchResultsStoryboard", bundle: nil).instantiateViewController(withIdentifier: "SearchResultVC") as? SearchResultViewController else { return }
-        
-        let text = serachHistory[indexPath.row]
-        apiManagerDelegate.getSearchResults(for: text) { [weak self] resultsData in
-            guard let self = self else { return }
-            self.searchResultModel = resultsData.products
-            self.searchResultsArray?.append(resultsData)
-            
-            vc.searchResultModel = self.searchResultModel
-            vc.tableViewSearchResultArray = self.searchResultsArray
-            DispatchQueue.main.async {
-                vc.title = text
-            }
-        }
-        repeat {
-            self.indicator.startAnimating()
-        } while vc.searchResultModel == nil
-        self.navigationController?.pushViewController(vc, animated: true
-        )
-        
-        self.indicator.stopAnimating()
-        tableView.deselectRow(at: indexPath, animated: true)
-    }
-    
-    //MARK: - функция, срабатывающая по нажатию кнопки Return в SearchBar
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        indicator.startAnimating()
-        
-        guard let text = searchBar.text,
-              let vc = UIStoryboard(name: "SearchResultsStoryboard", bundle: nil).instantiateViewController(withIdentifier: "SearchResultVC") as? SearchResultViewController
-        else { return }
-        
-        serachHistory.append(text) //сохранили запрос в историю. Лучше хранить в БД, но для примера сойдет.
-        
-        apiManagerDelegate.getSearchResults(for: text) { [weak self] resultsData in
-            guard let self = self else { return }
-            self.searchResultModel = resultsData.products //передали дату о запрашиваемом предмете
-            self.searchResultModelCompany = resultsData.campaigns
-            self.searchResultsArray?.append(resultsData) //для чего передаю?
-            vc.searchResultModel = self.searchResultModel
-            vc.searchResultModelCompany = self.searchResultModelCompany
-            DispatchQueue.main.async {
-                vc.title = text
-            }
-            
-        }
-        previousSearchTableView.reloadData()
-        
-        repeat {
-            indicator.startAnimating()
-        } while vc.searchResultModel == nil
-        self.navigationController?.pushViewController(vc, animated: true
-        )
-        self.indicator.stopAnimating()
-        
-    }
-}
-
-
-
 
