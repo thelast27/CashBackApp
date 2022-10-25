@@ -8,12 +8,12 @@
 import UIKit
 
 class LoginViewController: UIViewController {
+    
+    private let bottomLine = CALayer()
+    private let apiManagerDelegate: RestAPIProviderProtocol = APIManager()
 
     @IBOutlet weak var viewForButton: UIView!
     @IBOutlet weak var numberTextField: UITextField!
-    
-    private let bottomLine = CALayer()
-    private var apiManagerDelegate: RestAPIProviderProtocol = APIManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,13 +21,14 @@ class LoginViewController: UIViewController {
         viewForButton.layer.cornerRadius = 30
         viewForButton.clipsToBounds = true
         
+        //настраиваем полоску под полем ввода номера
         bottomLine.frame = CGRect(x: 0.0, y: numberTextField.frame.height - 1, width: numberTextField.frame.width - 15, height: 1.0)
         bottomLine.backgroundColor = UIColor.gray.cgColor
         numberTextField.borderStyle = UITextField.BorderStyle.none
         numberTextField.layer.addSublayer(bottomLine)
         
     }
-    @IBAction func sendNumberPressed(_ sender: Any) {
+    @IBAction func sendNumberPressed(_ sender: Any) { //запрашивем проверку у сервера по введенному номеру
         guard numberTextField.hasText,
               let number = numberTextField.text
         else { return }
